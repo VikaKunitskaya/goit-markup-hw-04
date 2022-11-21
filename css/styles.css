@@ -12,6 +12,7 @@
   --primary-border-color: #ececec;
   --grey-bg-color: #f5f4fa;
   --galery-br-color: #eeeeee;
+  --primary-icon-color: #afb1b8;
 }
 /* 
  *{
@@ -237,6 +238,25 @@ img {
   margin-right: 0;
 }
 
+.benefits-item::before {
+  display: block;
+  content: "";
+  height: 70px;
+  outline: 1px lawngreen;
+  background-image: url(../images/sprite.svg#cloc);
+  background-size: contain;
+}
+
+.benefits-icon-section {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--grey-bg-color);
+}
+.benefits-icon {
+  background-position: 50% 50%;
+}
+
 .benefits-subtitle {
   font-weight: 700;
   line-height: 1.4;
@@ -301,6 +321,26 @@ img {
   font-size: 16px;
   line-height: 1.19;
   color: var(--secondary-text-color);
+}
+
+.clients-list {
+  display: flex;
+}
+
+.clients-item {
+  padding: 16px 32px;
+  margin-right: 30px;
+  margin-top: 50px;
+
+  border: solid 1px var(--primary-icon-color);
+}
+
+.clients-item:last-child {
+  margin-right: 0;
+}
+
+.clients-icon {
+  fill: var(--primary-icon-color);
 }
 
 .footer {
