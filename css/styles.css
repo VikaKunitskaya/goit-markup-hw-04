@@ -14,11 +14,6 @@
   --galery-br-color: #eeeeee;
   --primary-icon-color: #afb1b8;
 }
-/* 
- *{
-  outline: 0.5px solid red;
-} 
-*/
 
 body {
   font-family: var(--main-font);
@@ -63,6 +58,8 @@ img {
 .benefits.section {
   padding-bottom: 0;
 }
+
+/*HEADER*/
 
 .header {
   padding: 24px 0 25px 0;
@@ -135,7 +132,7 @@ img {
 }
 
 .header-contact-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
 
   font-weight: 500;
@@ -161,7 +158,6 @@ img {
 
 .contact-icon {
   margin-right: 10px;
-  cursor: pointer;
 }
 
 /*  HERO */
@@ -222,6 +218,8 @@ img {
   color: var(--primary-text-color);
 }
 
+/* BENEFITS */
+
 .hidden {
   display: none;
 }
@@ -238,23 +236,16 @@ img {
   margin-right: 0;
 }
 
-.benefits-item::before {
-  display: block;
-  content: "";
-  height: 70px;
-  outline: 1px lawngreen;
-  background-image: url(../images/sprite.svg#cloc);
-  background-size: contain;
-}
-
 .benefits-icon-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
   background-color: var(--grey-bg-color);
-}
-.benefits-icon {
-  background-position: 50% 50%;
 }
 
 .benefits-subtitle {
@@ -267,6 +258,8 @@ img {
 .benefits-description {
   color: var(--secondary-text-color);
 }
+
+/* ABOUT */
 
 .about-list {
   display: flex;
@@ -300,6 +293,8 @@ img {
   border-radius: 0px 0px 4px 4px;
 
   background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-item:last-child {
@@ -323,20 +318,80 @@ img {
   color: var(--secondary-text-color);
 }
 
+.team-list-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.team-link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  width: 44px;
+  height: 44px;
+  color: var(--primary-icon-color);
+}
+
+.team-item-icon {
+  margin-right: 10px;
+}
+
+.team-item-icon:last-child {
+  margin-right: 0;
+}
+
+.team-link-icon:hover,
+.team-link-icon:focus {
+  background-color: var(--accent-color);
+}
+
+.team-link-icon:hover .team-icon,
+.team-link-icon:focus .team-icon {
+  fill: var(--primary-bg-color);
+}
+
+.team-icon {
+  fill: var(--primary-icon-color);
+}
+
+/* CLIENTS */
+
 .clients-list {
   display: flex;
+  margin-top: 50px;
 }
 
 .clients-item {
-  padding: 16px 32px;
+  flex-basis: calc((100% - 150px) / 6);
+  height: 92px;
   margin-right: 30px;
-  margin-top: 50px;
-
-  border: solid 1px var(--primary-icon-color);
 }
 
 .clients-item:last-child {
   margin-right: 0;
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+
+.clients-link {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: solid 1px var(--primary-icon-color);
+  border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: solid 1px var(--accent-color);
 }
 
 .clients-icon {
@@ -378,6 +433,58 @@ img {
 .address-link:focus,
 .address-link:hover {
   color: var(--accent-color);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-container {
+  margin-right: 70px;
+}
+
+.footer-text {
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  color: var(--primary-bg-color);
+}
+
+.footer-list-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.footer-link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-item-icon {
+  margin-right: 10px;
+}
+
+.footer-item-icon:last-child {
+  margin-right: 0;
+}
+
+.footer-link-icon:hover,
+.footer-link-icon:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-bg-color);
+}
+
+.footer-icon {
+  fill: var(--primary-bg-color);
 }
 
 /* Style for Portfolio */
@@ -428,6 +535,12 @@ img {
 
 .gallery-item:nth-child(3n) {
   margin-right: 0;
+}
+
+.gallery-item:hover,
+.gallery-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-wrapper {
